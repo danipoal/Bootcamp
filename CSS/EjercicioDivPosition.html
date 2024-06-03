@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .caja {
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            border: solid 3px;
+            margin: 50px auto;
+        }
+
+        .eje {
+            background-color: greenyellow;
+            height: 20px;
+            width: 20px;
+            border: solid;
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+        }
+
+        .pos1 {
+            top: -10px;
+            left: -10px;
+        }
+
+        .pos2 {
+            top: -35px;
+            left: 285px;
+        }
+
+        .pos3 {
+            top: 240px;
+            left: -10px;
+        }
+
+        .pos4 {
+            top: 215px;
+            left: 290px;
+        }
+
+        .diana {
+            display: inline-block;
+            margin: 50px;
+            height: 150px;
+            width: 150px;
+            background: radial-gradient(circle,
+                    red 10%,
+                    white 10% 20%,
+                    red 20% 30%,
+                    white 30% 40%,
+                    red 40% 50%,
+                    white 50% 60%,
+                    red 60% 70%,
+                    white 70% 80%);
+        }
+
+
+        .redonda {
+            display: inline-block;
+            background-color: rgb(255, 0, 0);
+            /* width: 30px;
+            height: 30px;*/
+            border-radius: 50%;
+            position: relative;
+
+        }
+
+        .red5 {
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            z-index: 100;
+            top: -235px;
+            left: -15px;
+            animation: moveRight 2s linear infinite;
+
+        }
+
+        .red3:hover {
+            background-color: greenyellow;
+
+        }
+
+        @keyframes moveRight {
+            20% {
+                background-color:green;
+            }
+
+            100% {
+                background-color: yellow;
+            }
+        }
+
+        .red4 {
+            background-color: red;
+            width: 70px;
+            height: 70px;
+            z-index: 90;
+            top: -214px;
+            left: 39px;
+        }
+
+        .red3 {
+            background-color: white;
+            width: 110px;
+            height: 110px;
+            z-index: 80;
+            top: -120px;
+            left: 20px;
+
+        }
+
+        .red2 {
+            background-color: red;
+            width: 140px;
+            height: 140px;
+            z-index: 70;
+            top: 8px;
+            left: 4px;
+            outline: 20px red solid;
+            outline-offset: 25px;
+            box-shadow: 3px 4px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <div class="eje pos1">1</div>
+        <div class="eje pos2">2</div>
+        <div class="eje pos3">3</div>
+        <div class="eje pos4">4</div>
+    </div>
+
+    <div class="diana"></div>
+
+    <div id="as" style="display: inline-block; border: solid; height: 150px; width: 150px;">
+        <div class="redonda red2"></div>
+        <div class="redonda red3"></div>
+        <div class="redonda red4"></div>
+        <div class="redonda red5"></div>
+    </div>
+
+</body>
+
+</html>

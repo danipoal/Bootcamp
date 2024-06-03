@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion en flex</title>
+    <style>
+        .container{
+            margin: 300px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .redonda{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+
+        }
+        .r1{
+            height: 80px;
+            width: 80px;
+            background-color: blue;
+            z-index: 100;
+        }
+        .r2{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            z-index: 90;
+        }
+        .r3{
+            height: 230px;
+            width: 230px;
+            background-color: white;
+            z-index: 80;
+        }
+        .r4{
+            background-color: red;
+            border: 4px black outset;
+            box-shadow: 10px 8px  10px gray;
+        }
+        .estrella{
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            width: 90px;
+            animation: rotate 0.7s ease-in-out infinite alternate;
+            position: absolute;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+                width: 60px;
+
+            } to {
+                transform: rotate(360deg);
+                width: 90px;
+
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="redonda r1"></div>
+        <div class="redonda r2"></div>
+        <div class="redonda r3"></div>
+        <div class="redonda r4"></div>
+        <!--<div class="redonda r5"></div>-->
+
+        <img class="estrella" src="estrella.webp" alt="No se carga">
+    </div>
+</body>
+</html>
