@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <style>
+        header {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .bola {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            display: inline-block;
+            margin: auto 5px;
+        }
+
+        .bolaMezcla {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            position: absolute;
+
+            mix-blend-mode: screen
+        }
+
+        .rojo {
+            background-color: red;
+        }
+
+        .verde {
+            background-color: greenyellow;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+
+        .rosa {
+            background-color: pink;
+        }
+
+        .lightBlue {
+            background-color: aqua;
+        }
+
+        .amarillo {
+            background-color: yellow;
+        }
+
+        .sectionGrande {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .sectionPeque {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .SectionMezcla {
+            border: 0.4px black solid;
+
+            height: 200px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .signo {
+            margin: 0 3px;
+            font-weight: 900;
+        }
+
+        .pos1 {
+            left: 200px;
+        }
+
+        .pos2 {
+            left: 270px;
+        }
+
+        .pos3 {
+            left: 235px;
+            bottom: -300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Colores primarios</h1>
+        <div class="bola rojo"></div>
+        <div class="bola verde"></div>
+        <div class="bola azul"></div>
+    </header>
+    <section class="sectionGrande">
+        <h1>Colores secundarios</h1>
+
+        <section class="sectionPeque">
+            <div class="bola rojo"></div>
+            <div class="signo">+</div>
+            <div class="bola azul"></div>
+            <div class="signo">=</div>
+            <div class="bola rosa"></div>
+        </section>
+
+        <section class="sectionPeque">
+            <div class="bola azul"></div>
+            <div class="signo">+</div>
+            <div class="bola verde"></div>
+            <div class="signo">=</div>
+            <div class="bola lightBlue"></div>
+        </section>
+
+        <section class="sectionPeque">
+            <div class="bola verde"></div>
+            <div class="signo">+</div>
+            <div class="bola rojo"></div>
+            <div class="signo">=</div>
+            <div class="bola amarillo"></div>
+        </section>
+        <h1>RGB</h1>
+        <div class="sectionPeque">
+            <div class="SectionMezcla">
+
+                <div class="bolaMezcla rojo pos1"></div>
+                <div class="bolaMezcla verde pos2"></div>
+                <div class="bolaMezcla azul pos3"></div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

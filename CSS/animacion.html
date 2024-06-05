@@ -26,6 +26,17 @@
             width: 80px;
             background-color: blue;
             z-index: 100;
+            animation: tamano 0.5s ease-in infinite alternate;
+        }
+        @keyframes tamano {
+            from{
+                width: 80px;
+                height: 80px;
+            }
+            to{
+                width: 100px;
+                height: 100px;
+            }
         }
         .r2{
             height: 150px;
@@ -49,17 +60,17 @@
             align-items: center;
             z-index: 200;
             width: 90px;
-            animation: rotate 0.7s ease-in-out infinite alternate;
+            animation: rotate 0.7s linear infinite;
             position: absolute;
         }
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
-                width: 60px;
+                
 
             } to {
                 transform: rotate(360deg);
-                width: 90px;
+                
 
             }
         }
