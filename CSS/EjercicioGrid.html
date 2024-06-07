@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        .container {
+            border: solid red;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            height: 1500px;
+        }
+
+        .header {
+            background-color: black;
+
+        }
+
+        .menu {
+            background-color: red;
+            grid-column: 2 / span 3;
+
+        }
+
+        .hero {
+            background-color: rgb(21, 105, 105);
+            grid-area: 2 / 1 / span 4 / -1;
+        }
+
+        .main {
+            background-color: rgb(30, 70, 143);
+            grid-area: 6 / 1 / 10 / 3;
+
+        }
+
+        .image {
+            background-color: darkkhaki;
+            grid-area: 6 / 4 / span 2/ -1;
+        }
+
+        .extra {
+            background-color: greenyellow;
+            grid-area: 8 / 4 / span 2/ -1;
+        }
+
+        .banner {
+            background-color: yellow;
+            grid-row: 10 / -1;
+            grid-column: 1 / -1;
+        }
+
+        /*425 - 768 - 1024*/
+        /*Media querry mobile*/
+        @media (min-width: 425px) and (max-width: 768px) {
+            .header {
+                grid-column: 1 / -1;
+            }
+
+            .menu {
+                grid-area: 5 / 1 / -1 / 2;
+            }
+
+            .hero {
+                grid-area: 2 / 1 / 5 / -1;
+            }
+
+            .main {
+                grid-area: 5/ 2/ 8/ -1;
+            }
+
+            .image {
+                grid-row: 10 / 11;
+                grid-column: 4 / 5;
+            }
+
+            .extra {
+                grid-area: 10 / 2 / 11 / 4;
+            }
+
+            .banner {
+                grid-area: 8 / 2 / 10 / 5;
+            }
+        }
+
+        /*Media querry Tablet*/
+        @media (max-width: 425px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(9, 1fr);
+            }
+
+            .header {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            .menu {
+                grid-area: 2 / 1 /4 / 2;
+            }
+
+            .hero {
+                grid-area: 4/ 1 /6 / 2;
+            }
+
+            .main {
+                grid-area: 6 / 1 / 8/ 2;
+            }
+
+            .image {
+                grid-area: 8 / 1 /9 / 2;
+            }
+
+            .extra {
+                grid-area: 9/ 1 / 10/ 2;
+            }
+
+            .banner {
+                grid-area: 10/ 1 / 11/ 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="hero">HERO</div>
+        <div class="main">MAIN</div>
+        <div class="image">IMAGE</div>
+        <div class="extra">EXTRA</div>
+
+        <div class="banner">BANNER</div>
+    </section>
+
+</body>
+
+</html>
