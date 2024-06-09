@@ -27,6 +27,10 @@ body{
     font-size: 1.5rem;
     font-weight: 200;
     line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .item1{
     background-color: var(--naranja);
@@ -40,7 +44,7 @@ body{
 .default-title{
     color: white;
     text-transform: uppercase;
-    
+    margin-top: 40px;
     
 }
 .default-text{
@@ -49,14 +53,15 @@ body{
     opacity: 0.9;
 }
 .icons{
-
+    width: 80px;
 }
+
 .default-button{
     margin-top: 50px;
-    height: 50px;
-    width: 150px;
+    height: 55px;
+    width: 170px;
     background-color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bolder;
     border-radius: 30px;
     border: 0;
@@ -65,4 +70,67 @@ body{
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     padding: 4px;
+}
+.default-button:active{
+    border: white 1px solid;
+    color: white;
+    cursor: pointer;
+}
+.buttonNaranja{
+    color: var(--naranja);
+
+}
+.buttonNaranja:active{
+    background-color: var(--naranja);
+}
+.buttonLightVerde{
+    color: var(--light-verde);
+}
+.buttonLightVerde:active{
+    background-color: var(--light-verde);
+}
+.buttonVerde{
+    color: var(--verde);
+}
+.buttonVerde:active{
+    background-color: var(--verde);
+}
+@media(max-width:768px){
+    /*Para tablets y telefonos*/
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: fit-content;
+    }
+    .item{
+        height: 550px;
+    }
+}
+@media(min-width:768px) and (max-width:1350px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: fit-content;
+    }
+    .item{
+        height: 350px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding-left: 10px;
+        height: fit-content;
+        font-size: 1.2rem;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+    }
+    .icons{
+        height: 50px;
+    }
 }
