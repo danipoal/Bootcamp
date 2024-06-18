@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.header{
+    white-space: nowrap;
+}
+#logo-amazon{
+    position: relative;
+    width: 130px;
+    border: solid;
+    display: inline-block;
+}
+.nav1{
+    border: solid;
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+    width: 90%;
+}
