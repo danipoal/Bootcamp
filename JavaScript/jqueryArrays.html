@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays en jQuery</title>
+    <style>
+        main{
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            border: solid;
+            background-color: antiquewhite;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            height: 20px;
+            margin: 30px;
+        }
+        fieldset{
+            height: fit-content;
+            margin-bottom: 60px;
+        }
+
+        button{
+            padding: 2px;
+            margin-right: 2px;
+        }
+        .result{
+            display: flex;
+            justify-content: center;
+        }
+        .colores{
+            width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .red{
+            background-color: rgba(255, 0, 0, 0.349);
+        }
+        .blue{
+            background-color: aquamarine;
+        }
+        .yellow{
+            background-color: darkkhaki;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <form class="add" action="">
+            <fieldset>
+                <legend>Añadir</legend>
+                <button id="push" type="button">push</button>
+                <button id="unshift" type="button">unshift</button>
+                <button id="insert" type="button">insert at</button>
+                <input id="ubi1" type="number">
+            </fieldset>
+
+
+        </form>
+        <form class="remove" action="">
+            <fieldset>
+                <legend>Eliminar</legend>
+                <button id="pop" type="button">pop</button>
+                <button id="shift" type="button">shift</button>
+                <button id="remove" type="button">remove at</button>
+                <input id="ubi2" type="number">
+            </fieldset>
+
+
+
+        </form>
+        <div class="result">
+            <p class="array">[]</p>
+        </div>
+        <div class="colores">
+            <input type="color" name="color" id="color">
+            <input type="button" value="red" id="red">
+            <input type="button" value="blue" id="blue">
+            <input type="button" value="yellow" id="yellow">
+        </div>
+    </main> 
+    <script src="./jquery-3.7.1.js"></script>
+    <script src="./jqueryArrays.js"></script>
+</body>
+</html>

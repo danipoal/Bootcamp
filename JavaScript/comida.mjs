@@ -24,7 +24,7 @@ function verPlatos(categoria) {
 
 const findCategory = (category) => foods.filter((food) => (food.category === category));    //La cosa es que me da todos los elementos con todos sus atributos que cumplan esto
 // console.log(findCategory('Fast Food'));
-console.log(verPlatos('Fast Food'));
+// console.log(verPlatos('Fast Food'));
 
 //5- Calcular el precio consumido con map, filter, reduce
 const ticket = ['🥜', '🌮', '🥗', '🍕', '🍣', '🧀'];
@@ -34,8 +34,9 @@ const ticket = ['🥜', '🌮', '🥗', '🍕', '🍣', '🧀'];
     //Despues, Sacar su precio e irlo sumando a un total
     //Finalmente dar el output
 
-    const cuenta = () => {
-        
-    }
+    const cuenta = (emoji) => foods.filter(food => (food.icon === emoji));
+    const totalPrice = ticket.map(cuenta);
+
+    console.log(totalPrice(cuenta(ticket)));
 
 
