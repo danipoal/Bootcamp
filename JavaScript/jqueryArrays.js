@@ -63,18 +63,37 @@ shift.on('click', function () {
  //Cambiador de colores mediante toggle
 const red = document.querySelector('#red');
 const blue = document.querySelector('#blue');
-const yellow = document.querySelector('#yellow');
+const yellow = $('#yellow');
 
 const main = document.querySelector('main');
 
 //En js no hay toggle como tal pero se puede inplementar a mano
 red.addEventListener('click', function(){
-    main.classList.contains('red') ? main.classList.remove('red') : main.classList.add('red');
+    main.style = null;  //Le quitamos el style ya que si no no cambia el estilo si se selecciono color personalizado
+
+    main.classList.contains('red') ? main.classList.remove('red') : main.classList.add('red');          //Primero hacemos un toggle de la clase que queremos
+
+    main.classList.contains('yellow') || main.classList.contains('blue') ? main.classList.remove('yellow', 'blue'): true;   //Despues, si tiene otras clases que impiden que se añada el color correctamente, se quitan
 })
 blue.addEventListener('click', function(){
+    main.style = null;
     main.classList.toggle('blue');
+    main.classList.contains('yellow') || main.classList.contains('red') ? main.classList.remove('yellow', 'red'): true;
+
 })
 
 //Yellow en jQuery
+const mainQuery = $('main');
+yellow.on('click', function() {
+    main.style = null;
 
+    mainQuery.toggleClass('yellow');
+    mainQuery.hasClass('blue') || mainQuery.hasClass('red') ? mainQuery.removeClass('blue red') : true;     //Para que este funcione, se tiene que usar estos metodos de jQuery y sin , en el remove
+})
 
+//Añadimos a traves de el css cualquier color seleccionado
+
+const color = document.querySelector('#color');
+color.addEventListener('input', function () {
+    main.style.backgroundColor = color.value;
+  })
