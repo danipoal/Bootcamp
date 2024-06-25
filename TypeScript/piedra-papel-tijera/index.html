@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel y tijera</title>
+    <style>
+        main{
+            height: 800px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .container{
+            padding: 10px;
+            border: 2px solid rgb(47, 47, 87);
+            width: 40%;
+            border-radius: 4px;
+            box-shadow: 4px 4px gray;
+            position: relative;
+        }
+        .container h1{
+            text-align: center;
+        }
+        #console{
+            font-family: monospace;
+            border: solid rgb(84, 164, 235);
+            box-shadow: 2px 3px rgb(18, 88, 150);
+            border-radius: 4px;
+            width: 95%;
+            margin: 0;
+            margin-bottom: 4px;
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+
+            display: flex;
+            
+            justify-content: space-between;
+        }
+        #console input{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Consola</h1>
+            <div id="canvas">
+
+            </div>
+            <div id="console">
+                <p id="output">
+aaaaaaaaaaaaaaaaa
+                </p>
+                <input id="input" type="text">
+            </div>
+        </div>
+        <div class="container">
+            <h1>Estadisticas</h1>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
