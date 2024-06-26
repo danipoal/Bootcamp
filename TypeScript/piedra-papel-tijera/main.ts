@@ -31,7 +31,7 @@ class Jugador {
         }
     }
 }
-const comparacionGame = (jugada1, jugada2) => {
+const comparacionGame = (jugada1:string, jugada2:string) => {
     if(jugada1 === jugada2){
         return "Empate";
     }else if(
@@ -108,7 +108,7 @@ function jugar(){
         
     }
 }
-function validarInput(buffer){
+function validarInput(buffer:string){
     if(buffer === "si"){
         jugador2.ia = false;
         jugar();
@@ -121,9 +121,6 @@ function validarInput(buffer){
     }
 }
 
-function valorBuffer(buffer){
-    if(buffer == "pider")
-}
 let jugador1 = new Jugador();
 let jugador2 = new Jugador();
 

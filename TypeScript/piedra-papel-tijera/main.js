@@ -102,10 +102,6 @@ function validarInput(buffer) {
         console.log("Juego iniciado con ia");
     }
 }
-function valorBuffer(buffer) {
-    if (buffer == "pider")
-        ;
-}
 var jugador1 = new Jugador();
 var jugador2 = new Jugador();
 startGame(jugador1, jugador2);
