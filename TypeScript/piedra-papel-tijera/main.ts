@@ -16,13 +16,15 @@ class Jugador {
             
             return tipos[Math.floor(Math.random() * 3)];
         }else{
-            do{ //Hacemos que mientras no se tenga la elección se compruebe todo el rato si en el buffer hay eleccion y luego se elija
+            //do{ //Hacemos que mientras no se tenga la elección se compruebe todo el rato si en el buffer hay eleccion y luego se elija
+            updtConsoleOutput("Elige tu elección [piedra, papel, tijeras]");
             
-                updtConsoleOutput("Elige tu elección [piedra, papel, tijeras]");
+            console.log(buffer);
+            
             if(buffer == "piedra" || buffer == "papel" || buffer == "tijeras"){
                 this.eleccion = buffer;
             }
-            }while(!this.eleccion)
+            //}while(!this.eleccion)
 
             
             return this.eleccion;
@@ -75,8 +77,12 @@ function controllerInput() : string {        //Logica ejecutable al pulsar ENTER
 consoleInput.addEventListener('keydown', (evento) => {
     if(evento.key === "Enter"){
         buffer = controllerInput();
-        validarInput(buffer);
-        console.log(buffer);
+        if(consoleOutput.textContent == "Quieres jugar vs IA [Si, No]"){
+            validarInput(buffer);
+            console.log(buffer);
+        }else{
+            buffer = controllerInput();
+        }
     }
 })
 
@@ -88,26 +94,35 @@ function startGame(jugador1 : Jugador, jugador2 : Jugador)  {
     updtConsoleOutput("Quieres jugar vs IA [Si, No]");
     console.log("Empezamos");
 
+}
 
+function jugar(){
     for (let index = 0; index < 6; index++) {
         const jugada1 = jugador1.jugada();
         const jugada2 = jugador2.jugada();
+        canvas.innerHTML += "<p> El jugador 1 eligio " + jugada1 + "</p>";
+        canvas.innerHTML += "<p> El jugador 2 eligio " + jugada2 + "</p>";
         //Comparar el game
         const result = comparacionGame(jugada1, jugada2);
         canvas.innerHTML += "<p>" + result + "</p>";
         
     }
-
 }
 function validarInput(buffer){
     if(buffer === "si"){
         jugador2.ia = false;
+        jugar();
         console.log("Juego iniciado sin ia")
     }else if(consoleInput.value === "no"){
         jugador2.ia = true;
+        jugar();
         console.log("Juego iniciado con ia")
 
     }
+}
+
+function valorBuffer(buffer){
+    if(buffer == "pider")
 }
 let jugador1 = new Jugador();
 let jugador2 = new Jugador();
