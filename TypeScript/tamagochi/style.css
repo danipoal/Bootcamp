@@ -19,21 +19,32 @@ html, body, pre, code, kbd, samp {
 .tamagochi{
     grid-column: 1 / span 2;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background-color: rgb(252, 252, 255);
+    overflow: hidden;
 }
 .tamagochi-item{
     
 }
 .tamagochi-img{
-    width: 150px;
+    width: 260px;
     box-shadow: 0 0 -15px -15px rgb(252, 252, 255);
+}
+.life-bar{
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+.corazones{
+    height: 30px;
+    width: 30px;
 }
 .container1{
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: center;
 }
 .eat{
     background-color: rgba(165, 227, 73, 0.838);
@@ -50,7 +61,7 @@ html, body, pre, code, kbd, samp {
 .stat-bar{
     border: red solid;
     width: 60% !important;
-    height: 15px !important;
+    height: 15% !important;
     border: solid !important;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -63,15 +74,14 @@ html, body, pre, code, kbd, samp {
 }
 .text-bar{
     align-self: center;
-    font-size: 0.5rem;
-    margin-bottom: 5px;
+    font-size: 1rem;
 }
 .icon-img{
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     color: green;
     position: absolute;
-    top: 5px;
+    top: 15px;
     left: 10px;
     opacity: 0.7;
 }
@@ -79,7 +89,7 @@ html, body, pre, code, kbd, samp {
     align-self: center;
 }
 .boton{
-    font-size: 8px;
+    font-size: 1rem;
     padding: 2px !important;
     
 }
