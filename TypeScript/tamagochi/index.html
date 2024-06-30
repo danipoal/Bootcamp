@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagochi de Dani</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- minificado -->
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+    <!-- último -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- solo estilo del núcleo -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+        <!-- core style only -->
+        <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="main-div">
+        <div class="tamagochi">
+            <div class="tamagochi-item">
+                <img class="tamagochi-img" src="./img/pet.gif" alt="Error al cargar la imagen">
+            </div>
+        </div>
+        <div class="container1 eat">
+            <progress class="nes-progress is-success stat-bar" value="50" max="100"></progress>
+            <p class="nes-text text-bar">Hambre <span>50</span>%</p>
+            <img class="icon-img" src="./img/hambre.png" alt="Err">
+            <div class="botones">
+                <button type="button" class="nes-btn is-success boton">Success</button>
+                <button type="button" class="nes-btn is-success boton">Success</button>
+                <button type="button" class="nes-btn is-success boton">Success</button>
+            </div>
+        </div>
+        <div class="container1 play"></div>
+        <div class="container1 fight"></div>
+        <div class="container1 sleep"></div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

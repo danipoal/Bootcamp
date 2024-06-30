@@ -1,0 +1,85 @@
+html, body, pre, code, kbd, samp {
+    font-family: "Press Start 2P";
+}
+.main-div{
+    border: solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    height: 96vh;
+    margin: 10px 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 5px 3px gray;
+    overflow: hidden;
+}
+.tamagochi{
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(252, 252, 255);
+}
+.tamagochi-item{
+    
+}
+.tamagochi-img{
+    width: 150px;
+    box-shadow: 0 0 -15px -15px rgb(252, 252, 255);
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.eat{
+    background-color: rgba(165, 227, 73, 0.838);
+}
+.play{
+    background-color: yellow;
+}
+.fight{
+        background-color: rgba(245, 47, 47, 0.612);
+}
+.sleep{
+    background-color: rgba(87, 142, 232, 0.852);
+}
+.stat-bar{
+    border: red solid;
+    width: 60% !important;
+    height: 15px !important;
+    border: solid !important;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    overflow: hidden;
+    padding: 2px;
+    align-self: center;
+}
+.text-bar{
+    align-self: center;
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+}
+.icon-img{
+    height: 40px;
+    width: 40px;
+    color: green;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    opacity: 0.7;
+}
+.botones{
+    align-self: center;
+}
+.boton{
+    font-size: 8px;
+    padding: 2px !important;
+    
+}
