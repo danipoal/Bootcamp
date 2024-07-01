@@ -31,46 +31,46 @@
             </div>
         </div>
         <div class="container1 eat">
-            <progress class="nes-progress is-success stat-bar" value="50" max="100"></progress>
-            <p class="nes-text text-bar">Hambre <span>50</span>%</p>
+            <progress id="hambreBar" class="nes-progress is-success stat-bar" value="50" max="100"></progress>
+            <p class="nes-text text-bar">Hambre <span id="hambreIndicator">50</span>%</p>
             <img class="icon-img" src="./img/hambre.png" alt="Err">
-            <div class="botones">
-                <button type="button" class="nes-btn is-success boton">Helado</button>
-                <button type="button" class="nes-btn is-success boton">Lechuga</button>
-                <button type="button" class="nes-btn is-success boton">Carne</button>
+            <div id="hambreBotones" class="botones">
+                <button id="helado" type="button" class="nes-btn is-success boton">Helado</button>
+                <button id="lechuga" type="button" class="nes-btn is-success boton">Lechuga</button>
+                <button id="carne" type="button" class="nes-btn is-success boton">Carne</button>
             </div>
         </div>
         <div class="container1 play">
-            <progress class="nes-progress is-success stat-bar" value="50" max="100"></progress>
-            <p class="nes-text text-bar">Juego <span>50</span>%</p>
+            <progress id="juegoBar" class="nes-progress is-success stat-bar" value="50" max="100"></progress>
+            <p class="nes-text text-bar">Juego <span id="juegoIndicator">50</span>%</p>
             <img class="icon-img" src="./img/jugar.png" alt="Err">
             <div class="botones">
-                <button type="button" class="nes-btn is-warning boton">Iphone</button>
-                <button type="button" class="nes-btn is-warning boton">Rugby</button>
-                <button type="button" class="nes-btn is-warning boton">Escondite</button>
+                <button id="iphone" type="button" class="nes-btn is-warning boton">Iphone</button>
+                <button id="rugby" type="button" class="nes-btn is-warning boton">Rugby</button>
+                <button id="escondite" type="button" class="nes-btn is-warning boton">Escondite</button>
             </div>
         </div>
         <div class="container1 fight">
-            <progress class="nes-progress is-success stat-bar" value="50" max="100"></progress>
-            <p class="nes-text text-bar">Lucha <span>50</span>%</p>
+            <progress id="luchaBar" class="nes-progress is-success stat-bar" value="50" max="100"></progress>
+            <p class="nes-text text-bar">Lucha <span id="luchaIndicator">50</span>%</p>
             <img style="scale: 0.9;" class="icon-img" src="./img/luchar.png" alt="Err">
             <div class="botones">
-                <button type="button" class="nes-btn is-error boton">Death match</button>
-                <button type="button" class="nes-btn is-error boton">Judo</button>
-                <button type="button" class="nes-btn is-error boton">Boxeo</button>
+                <button id="deathMatch" type="button" class="nes-btn is-error boton">Death match</button>
+                <button id="judo" type="button" class="nes-btn is-error boton">Judo</button>
+                <button id="boxeo" type="button" class="nes-btn is-error boton">Boxeo</button>
             </div>
         </div>
         <div class="container1 sleep">
-            <progress class="nes-progress is-success stat-bar" value="50" max="100"></progress>
-            <p class="nes-text text-bar">Sueño <span>50</span>%</p>
+            <progress id="sueñoBar" class="nes-progress is-success stat-bar" value="50" max="100"></progress>
+            <p class="nes-text text-bar">Sueño <span id="sueñoIndicator">50</span>%</p>
             <img style="width: 80px; height: auto; left: 0; scale: 1.1;" class="icon-img" src="./img/dormir.webp" alt="Err">
             <div class="botones">
-                <button type="button" class="nes-btn is-primary boton">Dormir</button>
-                <button type="button" class="nes-btn is-primary boton">Siesta</button>
-                <button type="button" class="nes-btn is-primary boton">Reborn</button>
+                <button id="dormir" type="button" class="nes-btn is-primary boton">Dormir</button>
+                <button id="siesta" type="button" class="nes-btn is-primary boton">Siesta</button>
+                <button id="reborn" type="button" class="nes-btn is-primary boton">Reborn</button>
             </div>
         </div>
     </main>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
