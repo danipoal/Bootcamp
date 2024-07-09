@@ -49,7 +49,7 @@
     <header class="container-fluid border-bottom border-3 p-2" style="height: 80px;">
         <nav class="row mx-4 align-self-center" style="height: 50px;">
             <h1 class="col-2" style="color: var(--verdin);"><strong>Pokebnb</strong></h1>
-            <input class="col w-50 form-control h-75 align-self-center" type="text" placeholder="Search Listings">
+            <input id="searchBar" class="col w-50 form-control h-75 align-self-center" type="text" placeholder="Search Listings">
             <button class="col btn btn-dark offset-3 col-2 h-75 align-self-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
         </nav>
     </header>
@@ -188,7 +188,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form id="loginForm" class="needs-validation" action="">
+                  <form id="loginForm" class="needs-validation" action="" method="post">
                     
                     <label for="usuario" class="form-label">Username</label>
                     <input type="text" class="form-control" id="usuario" name="usuario" placeholder="User" required>

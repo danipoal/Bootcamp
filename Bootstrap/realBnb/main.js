@@ -2,13 +2,14 @@ import { columna } from "./constantes.js";
 
 //VARIABLES
 const addCardBtn = document.querySelector('#addCard');
+const searchBar = document.querySelector('#searchBar');
 const requestOptions = {
     method: "GET",
     redirect: "follow"
 }
 
 //FUNCIONES
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { //Login
     // Selecciona el formulario por su id
     const form = document.getElementById('loginForm');
 
@@ -32,6 +33,23 @@ addCardBtn.addEventListener('click', () => {
     main.innerHTML += columna; 
 
     fetchPokemon();
+})
+searchBar.addEventListener('input', () => { //El input hace que se actualice sin tener que pulsar enter ni nada
+    console.log(searchBar.value);
+    const cards = document.querySelectorAll('.card');
+    cards.forEach( (card) => {
+        const titulo = card.querySelector('h3');
+        //Comprobamos si el contenido coincide con lo que se coloca en la barra
+        if(titulo.textContent.includes(searchBar.value.toUpperCase())){ //Se hace un upper para que se encuentre
+            //console.log(titulo.textContent + " De momento esta IN");
+            card.style.display = "block";
+        }else if(searchBar.value == ""){
+            card.style.display = "block";
+        }else{
+            //console.log(titulo.textContent + " OUT")
+            card.style.display = "none";
+        }
+    })
 })
 
 /*
@@ -79,10 +97,8 @@ const writeText = (cardObject, pokemonJson) => {
     //Peso
     const peso = cardObject.querySelector(".n-habitaciones");
     peso.innerText =pokemonJson.weight + " Kg";
-    console.log(columna);
 }
 function firstCamel(input){
-
     return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
