@@ -59,4 +59,15 @@ export const columna = `        <div class="row m-4 justify-content-center cuadr
 
             </div>
 
-        </div>`
+        </div>`;
+export const userBadge = `<div class="btn-group">
+  <button type="button" class="btn btn-primary offset-2 col-3 h-75 align-self-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown item text
+  </button>
+  <ul class="dropdown-menu">
+    <li><span class="dropdown-item-text">Dropdown item text</span></li>
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>`;

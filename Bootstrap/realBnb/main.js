@@ -1,8 +1,9 @@
-import { columna } from "./constantes.js";
+import { columna, userBadge } from "./constantes.js";
 
 //VARIABLES
 const addCardBtn = document.querySelector('#addCard');
 const searchBar = document.querySelector('#searchBar');
+const loginBtn = document.querySelector('#loginButton');
 const requestOptions = {
     method: "GET",
     redirect: "follow"
@@ -51,7 +52,11 @@ searchBar.addEventListener('input', () => { //El input hace que se actualice sin
         }
     })
 })
-
+loginBtn.addEventListener('click', () => {
+    const logDiv = document.querySelector('#logMenu');
+    //TODO Error al intentar sobreescribir el contenido de el boton
+    logDiv.innerHTML = userBadge;
+})
 /*
 * Se hace el fetch para cada elemento de carta html que exista. 
 */
