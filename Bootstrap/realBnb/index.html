@@ -33,6 +33,11 @@
             text-align: center;
             margin-bottom: -5 0px;
         }
+        .fixed-bottom-right{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
         main{
             position: relative;
         }
@@ -43,7 +48,7 @@
 
     <header class="container-fluid border-bottom border-3 p-2" style="height: 80px;">
         <nav class="row mx-4 align-self-center" style="height: 50px;">
-            <h1 class="col-2" style="color: var(--verdin);"><strong>Realbnb</strong></h1>
+            <h1 class="col-2" style="color: var(--verdin);"><strong>Pokebnb</strong></h1>
             <input class="col w-50 form-control h-75 align-self-center" type="text" placeholder="Search Listings">
             <button class="col btn btn-dark offset-3 col-2 h-75 align-self-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
         </nav>
@@ -60,7 +65,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -80,7 +85,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -99,7 +104,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -122,7 +127,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -142,7 +147,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -161,7 +166,7 @@
                 <div class="p-3">
                     <h6 class="text-muted">Private room</h6>
                     <h3>Alena Haven</h3>
-                    <p>Quaerat in sed repudiandae.
+                    <p id="description">Quaerat in sed repudiandae.
                         Dolore voluptatem consequatur.
                         Est tenetur esse fugit delectus aspernatur est.
                         Et sunt adipisci sit.</p>
@@ -199,10 +204,11 @@
 
               </div>
             </div>
-          </div>
+        </div>
     </main>
+    <button id="addCard" class="btn btn-primary btn-lg fixed-bottom-right" type="button">+</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
