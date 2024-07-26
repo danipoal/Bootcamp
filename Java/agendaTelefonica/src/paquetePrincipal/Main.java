@@ -27,13 +27,18 @@ public class Main {
             switch (opcion) {
                 case 1:
                     System.out.print("Creando ");
-                    opcion = 8;
+                    agenda.addContacto("a", "a", "a");
                     break;
 
                 case 2:
                     System.out.println("Que ID de contacto quieres ver?");
                     int id_selected = sc.nextInt();
                     agenda.readId(id_selected);
+                    break;
+
+                case 5:
+                    System.out.println("Agenda:");
+                    agenda.readAll();
                     break;
             }
 

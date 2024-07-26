@@ -47,7 +47,15 @@ public class connectDB {
             e.printStackTrace();
         }
     }
-    public void readDB(int id) throws SQLException {
+    public void createRow(Contacto contacto) throws SQLException{
+        String sql = "INSERT INTO `agenda`.`agenda` (`nombre`, `apellido`, `telefono`) VALUES ("+contacto.getNombre() + ", "+contacto.getApellido()+", "+contacto.getTelefono()+");";
+        Statement statement = connect.createStatement();
+        int rowInserted = statement.executeUpdate(sql);
+        if (rowInserted <= 0) {
+            System.err.println("Error al introducir la sentencia sql");
+        }
+    }
+    public String readDB(int id) throws SQLException {
         String sql = "SELECT * FROM agenda WHERE id_contacto = " + id +";";
         Statement statement = connect.createStatement();
         ResultSet result = statement.executeQuery(sql);
@@ -56,12 +64,40 @@ public class connectDB {
             String nombreResult = result.getString("nombre");
             String apellidoResult = result.getString("apellido");
             int telefono = result.getInt("telefono");
+            statement.close();
+            return new String(purple + "ID: " + idResult + " - "+ nombreResult +" "+ apellidoResult +" - Telefono: " + telefono + "\n" + reset);
+        }else{
+            statement.close();
+            return "";
+        }
+    }
+    public String[] readAllDB() throws SQLException{
+        String sql = "SELECT * FROM agenda";
+        Statement statement = connect.createStatement(
+                ResultSet.TYPE_SCROLL_INSENSITIVE,
+                ResultSet.CONCUR_READ_ONLY);
+        //El tipo de Statement permite al cursor ir de adelante a atras
+        ResultSet result = statement.executeQuery(sql);
 
+        //Encontramos el tamaño que usaremos para el array
+        result.last(); // Mover el cursor al final
+        int rowCount = result.getRow(); //Encontramos la ultima fila
+        String[] resultString = new String[rowCount];
+        result.beforeFirst(); //Devolvemos el valor al principio para procesar
+        rowCount = 0;
+        while(result.next()){
+            int idResult = result.getInt("id_contacto");
+            String nombreResult = result.getString("nombre");
+            String apellidoResult = result.getString("apellido");
+            int telefono = result.getInt("telefono");
 
-            System.out.printf(green + "ID: " + idResult + " - "+ nombreResult +" "+ apellidoResult +" - Telefono: " + telefono + "\n" + reset);
+            resultString[rowCount] = new String(purple + "ID: " + idResult + " - "+ nombreResult +" "+ apellidoResult +" - Telefono: " + telefono + "\n" + reset);
+            rowCount++;
         }
 
-        statement.close();
+
+
+        return resultString;
     }
 
 }
