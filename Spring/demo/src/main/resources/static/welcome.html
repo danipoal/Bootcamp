@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WelcomeSender</title>
+</head>
+<body>
+    <p>Formulario por GET</p>
+    <form action="/welcome" method="get">
+        <label for="">Nombre</label>
+        <input id="name" name="name" type="text">
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Formulario por Post</p>
+    <form action="/login" method="post">
+        <label for="user">User</label>
+        <input id="user" name="user" type="text">
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
