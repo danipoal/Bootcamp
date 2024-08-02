@@ -67,4 +67,10 @@ public class HomeController {
 	public String userHomePage(@PathVariable String usuario) {
 		return "Hola " + usuario;
 	}
+	
+	//Esta parte la hare com tymeleaf ya que obtiene los resultados facilmente
+	@RequestMapping("/usr/{idContacto}")
+	public String putHola(@PathVariable String idContacto) {
+		return "contacto.html";
+	}
 }
